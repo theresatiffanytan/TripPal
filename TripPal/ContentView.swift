@@ -3,7 +3,7 @@
 //  TripPal
 //
 //  Created by Deka Primatio on 19/03/23.
-//
+// 
 
 import SwiftUI
 
