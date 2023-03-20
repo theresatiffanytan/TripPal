@@ -13,11 +13,6 @@ struct ContentView: View {
         // HStack Kolom Search
         
         VStack (spacing: 20) {
-            Text("Trip Pal")
-                .font(.system(size: 36, weight: .bold))
-                .offset(x: -125)
-            
-            Divider()
             
             HStack {
                 TextField("Search resaturant, garden, etc ...", text: $searchFood) // Text: State Empty String
@@ -32,15 +27,134 @@ struct ContentView: View {
             .cornerRadius(50.0)
             .shadow(radius: 6)
             
-            
-            HStack (spacing:20){
-                VStack {
+            HStack (spacing:5){
+                VStack (spacing:10) {
                     Image("thebreeze")
                         .resizable()
                         .frame(width:110, height:110)
                         .cornerRadius(10)
-                        .offset(x:-30)
                         .shadow(radius: 3)
+                        .offset(x:5)
+                    
+                    Text("Restaurant & Cafe")
+                        .font(.system(size: 11, weight: .regular))
+                        .foregroundColor(Color.white)
+                        .padding(1)
+                        .frame(width:110)
+                        .background(.blue)
+                        .cornerRadius(8)
+                        .offset(x:5)
+                }
+                
+                Spacer()
+                
+                VStack (alignment: .leading, spacing: 10) {
+                    Text("The Breeze")
+                        .font(.system(size: 20, weight: .bold))
+                    //.offset(x:-35, y:-45)
+                    
+                    HStack {
+                        Image(systemName: "location")
+                        
+                        Text("Jl. BSD Green Office Park, Kabupaten Tangerang")
+                            .font(.system(size:14))
+                            .frame(height:40)
+                    }
+                    .foregroundColor(.gray)
+                    
+                    HStack {
+                        Image(systemName: "mappin.and.ellipse")
+                            .foregroundColor(.gray)
+                        
+                        Text("2.0 km")
+                            .font(.system(size:14))
+                    }
+                    .foregroundColor(.gray)
+                    
+                    Button {
+                        print("check in")
+                    }   label:{
+                        Text("Check In")
+                            .frame(maxWidth: .infinity, maxHeight: 10)
+                    } .buttonStyle(.bordered)
+                        .background(.orange)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                }
+            }
+            .padding(8)
+            .background(.white)
+            .cornerRadius(20)
+            .shadow(radius: 6)
+            
+            HStack (spacing:5){
+                VStack (spacing:10) {
+                    Image("thebreeze")
+                        .resizable()
+                        .frame(width:110, height:110)
+                        .cornerRadius(10)
+                        .shadow(radius: 3)
+                        .offset(x:5)
+                    
+                    Text("Shopping Center")
+                        .font(.system(size: 11, weight: .regular))
+                        .foregroundColor(Color.white)
+                        .padding(1)
+                        .frame(width:110)
+                        .background(.pink)
+                        .cornerRadius(8)
+                        .offset(x:5)
+                }
+                
+                Spacer()
+                
+                VStack (alignment: .leading, spacing: 10) {
+                    Text("AEON Mall")
+                        .font(.system(size: 20, weight: .bold))
+                    //.offset(x:-35, y:-45)
+                    
+                    HStack {
+                        Image(systemName: "location")
+                        
+                        Text("Jl. BSD Raya Utama, Kabupaten Tangerang")
+                            .font(.system(size:14))
+                            .frame(height:40)
+                    }
+                    .foregroundColor(.gray)
+                    
+                    HStack {
+                        Image(systemName: "mappin.and.ellipse")
+                            .foregroundColor(.gray)
+                        
+                        Text("2.0 km")
+                            .font(.system(size:14))
+                    }
+                    .foregroundColor(.gray)
+                    
+                    Button {
+                        print("check in")
+                    }   label:{
+                        Text("Check In")
+                            .frame(maxWidth: .infinity, maxHeight: 10)
+                    } .buttonStyle(.bordered)
+                        .background(.orange)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                }
+            }
+            .padding(8)
+            .background(.white)
+            .cornerRadius(20)
+            .shadow(radius: 6)
+            
+            HStack (spacing:5){
+                VStack (spacing:10) {
+                    Image("thebreeze")
+                        .resizable()
+                        .frame(width:110, height:110)
+                        .cornerRadius(10)
+                        .shadow(radius: 3)
+                        .offset(x:5)
                     
                     Text("Restaurant & Cafe")
                         .font(.system(size: 11, weight: .regular))
@@ -49,29 +163,112 @@ struct ContentView: View {
                         .frame(width:110)
                         .background(.pink)
                         .cornerRadius(8)
-                        .offset(x:-30)
-                    
+                        .offset(x:5)
                 }
                 
+                Spacer()
                 
-                
-                VStack (alignment: .leading) {
+                VStack (alignment: .leading, spacing: 10) {
                     Text("The Breeze")
-                        .font(.system(size: 28, weight: .bold))
-                        .offset(x:-35, y:-48)
+                        .font(.system(size: 20, weight: .bold))
+                    //.offset(x:-35, y:-45)
                     
+                    HStack {
+                        Image(systemName: "location")
                         
+                        Text("Jl. BSD Green Office Park, Kabupaten Tangerang")
+                            .font(.system(size:14))
+                    }
+                    .foregroundColor(.gray)
                     
+                    HStack {
+                        Image(systemName: "mappin.and.ellipse")
+                            .foregroundColor(.gray)
+                        
+                        Text("2.0 km")
+                            .font(.system(size:14))
+                    }
+                    .foregroundColor(.gray)
+                    
+                    Button {
+                        print("check in")
+                    }   label:{
+                        Text("Check In")
+                            .frame(maxWidth: .infinity, maxHeight: 10)
+                    } .buttonStyle(.bordered)
+                        .background(.orange)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
                 }
             }
-            
-            .frame(width: 361, height: 155)
+            .padding(8)
             .background(.white)
             .cornerRadius(20)
             .shadow(radius: 6)
             
+            HStack (spacing:5){
+                VStack (spacing:10) {
+                    Image("thebreeze")
+                        .resizable()
+                        .frame(width:110, height:110)
+                        .cornerRadius(10)
+                        .shadow(radius: 3)
+                        .offset(x:5)
+                    
+                    Text("Restaurant & Cafe")
+                        .font(.system(size: 11, weight: .regular))
+                        .foregroundColor(Color.white)
+                        .padding(1)
+                        .frame(width:110)
+                        .background(.pink)
+                        .cornerRadius(8)
+                        .offset(x:5)
+                }
+                
+                Spacer()
+                
+                VStack (alignment: .leading, spacing: 10) {
+                    Text("The Breeze")
+                        .font(.system(size: 20, weight: .bold))
+                    //.offset(x:-35, y:-45)
+                    
+                    HStack {
+                        Image(systemName: "location")
+                        
+                        Text("Jl. BSD Green Office Park, Kabupaten Tangerang")
+                            .font(.system(size:14))
+                    }
+                    .foregroundColor(.gray)
+                    
+                    HStack {
+                        Image(systemName: "mappin.and.ellipse")
+                            .foregroundColor(.gray)
+                        
+                        Text("2.0 km")
+                            .font(.system(size:14))
+                    }
+                    .foregroundColor(.gray)
+                    
+                    Button {
+                        print("check in")
+                    }   label:{
+                        Text("Check In")
+                            .frame(maxWidth: .infinity, maxHeight: 10)
+                    } .buttonStyle(.bordered)
+                        .background(.orange)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                }
+            }
+            .padding(8)
+            .background(.white)
+            .cornerRadius(20)
+            .shadow(radius: 6)
             
+            Spacer()
         }
+        .padding()
+        
     }
     
     struct ContentView_Previews: PreviewProvider {
