@@ -51,7 +51,6 @@ struct ContentView: View {
                 VStack (alignment: .leading, spacing: 10) {
                     Text("The Breeze")
                         .font(.system(size: 20, weight: .bold))
-                    //.offset(x:-35, y:-45)
                     
                     HStack {
                         Image(systemName: "location")
@@ -66,7 +65,7 @@ struct ContentView: View {
                         Image(systemName: "mappin.and.ellipse")
                             .foregroundColor(.gray)
                         
-                        Text("2.0 km")
+                        Text("650 m")
                             .font(.system(size:14))
                     }
                     .foregroundColor(.gray)
@@ -89,7 +88,7 @@ struct ContentView: View {
             
             HStack (spacing:5){
                 VStack (spacing:10) {
-                    Image("thebreeze")
+                    Image("aeon")
                         .resizable()
                         .frame(width:110, height:110)
                         .cornerRadius(10)
@@ -111,7 +110,6 @@ struct ContentView: View {
                 VStack (alignment: .leading, spacing: 10) {
                     Text("AEON Mall")
                         .font(.system(size: 20, weight: .bold))
-                    //.offset(x:-35, y:-45)
                     
                     HStack {
                         Image(systemName: "location")
@@ -126,7 +124,7 @@ struct ContentView: View {
                         Image(systemName: "mappin.and.ellipse")
                             .foregroundColor(.gray)
                         
-                        Text("2.0 km")
+                        Text("2.1 km")
                             .font(.system(size:14))
                     }
                     .foregroundColor(.gray)
@@ -149,19 +147,19 @@ struct ContentView: View {
             
             HStack (spacing:5){
                 VStack (spacing:10) {
-                    Image("thebreeze")
+                    Image("tamankota")
                         .resizable()
                         .frame(width:110, height:110)
                         .cornerRadius(10)
                         .shadow(radius: 3)
                         .offset(x:5)
                     
-                    Text("Restaurant & Cafe")
+                    Text("Garden & Park")
                         .font(.system(size: 11, weight: .regular))
                         .foregroundColor(Color.white)
                         .padding(1)
                         .frame(width:110)
-                        .background(.pink)
+                        .background(.green)
                         .cornerRadius(8)
                         .offset(x:5)
                 }
@@ -169,15 +167,15 @@ struct ContentView: View {
                 Spacer()
                 
                 VStack (alignment: .leading, spacing: 10) {
-                    Text("The Breeze")
+                    Text("Taman Kota")
                         .font(.system(size: 20, weight: .bold))
-                    //.offset(x:-35, y:-45)
                     
                     HStack {
                         Image(systemName: "location")
                         
-                        Text("Jl. BSD Green Office Park, Kabupaten Tangerang")
+                        Text("Jl. Letnan Sutopo, Kota Tangerang Selatan")
                             .font(.system(size:14))
+                            .frame(height:40)
                     }
                     .foregroundColor(.gray)
                     
@@ -185,7 +183,7 @@ struct ContentView: View {
                         Image(systemName: "mappin.and.ellipse")
                             .foregroundColor(.gray)
                         
-                        Text("2.0 km")
+                        Text("5.1 km")
                             .font(.system(size:14))
                     }
                     .foregroundColor(.gray)
@@ -208,19 +206,19 @@ struct ContentView: View {
             
             HStack (spacing:5){
                 VStack (spacing:10) {
-                    Image("thebreeze")
+                    Image("sport")
                         .resizable()
                         .frame(width:110, height:110)
                         .cornerRadius(10)
                         .shadow(radius: 3)
                         .offset(x:5)
                     
-                    Text("Restaurant & Cafe")
+                    Text("Playground & Sports")
                         .font(.system(size: 11, weight: .regular))
                         .foregroundColor(Color.white)
                         .padding(1)
                         .frame(width:110)
-                        .background(.pink)
+                        .background(.purple)
                         .cornerRadius(8)
                         .offset(x:5)
                 }
@@ -228,15 +226,15 @@ struct ContentView: View {
                 Spacer()
                 
                 VStack (alignment: .leading, spacing: 10) {
-                    Text("The Breeze")
-                        .font(.system(size: 20, weight: .bold))
-                    //.offset(x:-35, y:-45)
+                    Text("Dewantara Sport Center")
+                        .font(.system(size: 18, weight: .bold))
                     
                     HStack {
                         Image(systemName: "location")
                         
-                        Text("Jl. BSD Green Office Park, Kabupaten Tangerang")
+                        Text("Jl. Buaran Raya No.62, Kota Tangerang Selatan")
                             .font(.system(size:14))
+                            .frame(height:40)
                     }
                     .foregroundColor(.gray)
                     
@@ -244,7 +242,7 @@ struct ContentView: View {
                         Image(systemName: "mappin.and.ellipse")
                             .foregroundColor(.gray)
                         
-                        Text("2.0 km")
+                        Text("8.2 km")
                             .font(.system(size:14))
                     }
                     .foregroundColor(.gray)
