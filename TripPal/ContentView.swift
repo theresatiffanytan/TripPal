@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var animatingButton: Bool = false
     
     var body: some View {
-        // HStack Kolom Search
         
         ZStack {
             Image("wallpaper1")
