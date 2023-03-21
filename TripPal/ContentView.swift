@@ -20,7 +20,7 @@ struct ContentView: View {
             
             VStack (spacing: 20) {
                 
-//                Untuk logo dan search bar
+                // Untuk logo dan search bar
                 HStack {
                     TextField("Search restaurant, garden, etc ...", text: $searchLocation) // Text: State Empty String
                         .disableAutocorrection(true) // Disable Auto Correct
@@ -34,8 +34,8 @@ struct ContentView: View {
                 .cornerRadius(50.0)
                 .shadow(radius: 6)
                 .padding(.top, 20)
-                    
-//                Card 1
+                
+                // Card 1
                 ZStack {
                     Color.white.opacity(0.8)
                         .cornerRadius(20)
@@ -105,7 +105,7 @@ struct ContentView: View {
                     .padding(8)
                 }
                 
-//                Card 2
+                //                Card 2
                 ZStack {
                     Color.white.opacity(0.8)
                         .cornerRadius(20)
@@ -148,7 +148,7 @@ struct ContentView: View {
                             
                             HStack {
                                 Image(systemName: "mappin.and.ellipse")
-                                    
+                                
                                 
                                 Text("2.1 km")
                                     .font(.system(size:14))
@@ -169,7 +169,7 @@ struct ContentView: View {
                     .padding(8)
                 }
                 
-//                Card 3
+                //                Card 3
                 HStack (spacing:5){
                     VStack (spacing:10) {
                         Image("tamankota")
@@ -229,7 +229,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 6)
                 
-//                Card 4
+                //                Card 4
                 HStack (spacing:5){
                     VStack (spacing:10) {
                         Image("sport")
