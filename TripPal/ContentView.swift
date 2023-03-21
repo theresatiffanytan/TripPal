@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchLocation: String = ""
+    @State private var searchText: String = ""
     @State private var animatingButton: Bool = false
     
     var body: some View {
@@ -21,19 +21,34 @@ struct ContentView: View {
             VStack (spacing: 20) {
                 
                 // Untuk logo dan search bar
-                HStack {
-                    TextField("Search restaurant, garden, etc ...", text: $searchLocation) // Text: State Empty String
-                        .disableAutocorrection(true) // Disable Auto Correct
-                        .padding(.leading, 24.0) // Padding Tulisan didalam TextField
-                } // HStack Kolom Search
-                // Frame harus diatas Property yang lain
-                // .infinity = menyesuaikan dari layout parent-nya yaitu VStack
-                .frame(minWidth: 0, maxWidth: 361, minHeight: 50, maxHeight: 50)
-                // Customize Dimensi Kolom Search
-                .background(.white)
-                .cornerRadius(50.0)
-                .shadow(radius: 6)
-                .padding(.top, 20)
+                HStack (spacing: 5) {
+                    Image("iconHome")
+                        .resizable()
+                        .frame(width: 55, height: 55)
+                    
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(searchText.isEmpty ? Color.secondary : Color.white)
+                        TextField("search by text...", text: $searchText)
+                            .foregroundColor(.white)
+                            .overlay(
+                                Image(systemName: "xmark.circle.fill")
+                                    .padding()
+                                    .offset(x:10)
+                                    .foregroundColor(Color.accentColor)
+                                    .opacity(searchText.isEmpty ? 0.0 : 1.0)
+                                    .onTapGesture {
+                                        searchText = ""
+                                    }, alignment: .trailing
+                            )
+                    }
+                    .font(.headline)
+                    .padding()
+                    .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.gray)
+                        .shadow(color: .gray, radius: 10,x: 0, y: 0))
+                }
                 
                 // Card 1
                 ZStack {
