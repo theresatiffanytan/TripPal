@@ -16,20 +16,21 @@ struct ContentView: View {
         ZStack {
             Image("wallpaper1")
                 .frame(maxWidth: 361, maxHeight: 200)
+                .blur(radius: 1)
             
             VStack (spacing: 20) {
                 
                 // Untuk logo dan search bar
-                HStack (spacing: 5) {
+                HStack (spacing: 11) {
                     Image("iconHome")
                         .resizable()
                         .frame(width: 55, height: 55)
                     
                     HStack {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(searchText.isEmpty ? Color.secondary : Color.white)
+                            .foregroundColor(searchText.isEmpty ? Color.secondary : Color.blue)
                         TextField("search by text...", text: $searchText)
-                            .foregroundColor(.white)
+                            .foregroundColor(.gray)
                             .overlay(
                                 Image(systemName: "xmark.circle.fill")
                                     .padding()
@@ -44,16 +45,16 @@ struct ContentView: View {
                     .font(.headline)
                     .padding()
                     .background(
-                    RoundedRectangle(cornerRadius: 25)
-                        .fill(Color.gray)
-                        .shadow(color: .gray, radius: 10,x: 0, y: 0))
-                }
+                    RoundedRectangle(cornerRadius: 23)
+                        .fill(Color.white)
+                        .shadow(radius: 10,x: 0, y: 0))
+                }.padding(.top, 25)
                 
                 // Card 1
                 ZStack {
-                    Color.white.opacity(0.8)
+                    Color.white.opacity(0.85)
                         .cornerRadius(20)
-                        .shadow(color: Color.black.opacity(0.1), radius: 10, x:0, y:10)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x:0, y:10)
                         .blur(radius: 1)
                     
                     HStack (spacing:5){
@@ -99,21 +100,21 @@ struct ContentView: View {
                             .foregroundColor(Color.black.opacity(0.8))
                             
                             Button {
+                                
                                 withAnimation(.easeIn(duration: 0.3)){
                                     animatingButton.toggle()
                                 }
                                 print("check in")
                             }   label:{
+                                
                                 Text("Check In")
                                     .frame(maxWidth: .infinity, maxHeight: 10)
                                 
                             } .buttonStyle(.bordered)
-                            //.background(.orange)
                                 .background(LinearGradient(colors: [.red, .orange], startPoint: .topTrailing, endPoint: .bottomLeading))
                                 .cornerRadius(8)
                                 .foregroundColor(.white)
                                 .scaleEffect(animatingButton ? 0.9 : 1.0)
-                            
                         }
                     }
                     .padding(8)
@@ -121,9 +122,9 @@ struct ContentView: View {
                 
                 //                Card 2
                 ZStack {
-                    Color.white.opacity(0.8)
+                    Color.white.opacity(0.85)
                         .cornerRadius(20)
-                        .shadow(color: Color.black.opacity(0.1), radius: 10, x:0, y:10)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x:0, y:10)
                         .blur(radius: 1)
                     
                     HStack (spacing:5){
@@ -175,134 +176,143 @@ struct ContentView: View {
                                 Text("Check In")
                                     .frame(maxWidth: .infinity, maxHeight: 10)
                             } .buttonStyle(.bordered)
-                                .background(.orange)
+                                .background(LinearGradient(colors: [.red, .orange], startPoint: .topTrailing, endPoint: .bottomLeading))
                                 .cornerRadius(8)
                                 .foregroundColor(.white)
+                                .scaleEffect(animatingButton ? 0.9 : 1.0)
                         }
                     }
                     .padding(8)
                 }
                 
                 //                Card 3
-                HStack (spacing:5){
-                    VStack (spacing:10) {
-                        Image("tamankota")
-                            .resizable()
-                            .frame(width:110, height:110)
-                            .cornerRadius(10)
-                            .shadow(radius: 3)
-                            .offset(x:5)
-                        
-                        Text("Garden & Park")
-                            .font(.system(size: 10, weight: .regular))
-                            .foregroundColor(Color.white)
-                            .padding(1)
-                            .frame(width:110)
-                            .background(.green)
-                            .cornerRadius(8)
-                            .offset(x:5)
-                    }
+                ZStack {
+                    Color.white.opacity(0.85)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x:0, y:10)
+                        .blur(radius: 1)
                     
-                    Spacer()
-                    
-                    VStack (alignment: .leading, spacing: 10) {
-                        Text("Taman Kota")
-                            .font(.system(size: 20, weight: .bold))
-                        
-                        HStack {
-                            Image(systemName: "location")
+                    HStack (spacing:5){
+                        VStack (spacing:10) {
+                            Image("tamankota")
+                                .resizable()
+                                .frame(width:110, height:110)
+                                .cornerRadius(10)
+                                .shadow(radius: 3)
+                                .offset(x:5)
                             
-                            Text("Jl. Letnan Sutopo, Kota Tangerang Selatan")
-                                .font(.system(size:14))
-                                .frame(height:40)
+                            Text("Garden & Park")
+                                .font(.system(size: 10, weight: .regular))
+                                .foregroundColor(Color.white)
+                                .padding(1)
+                                .frame(width:110)
+                                .background(.green)
+                                .cornerRadius(8)
+                                .offset(x:5)
                         }
-                        .foregroundColor(.gray)
                         
-                        HStack {
-                            Image(systemName: "mappin.and.ellipse")
-                                .foregroundColor(.gray)
+                        Spacer()
+                        
+                        VStack (alignment: .leading, spacing: 10) {
+                            Text("Taman Kota")
+                                .font(.system(size: 20, weight: .bold))
                             
-                            Text("5.1 km")
-                                .font(.system(size:14))
+                            HStack {
+                                Image(systemName: "location")
+                                
+                                Text("Jl. Letnan Sutopo, Kota Tangerang Selatan")
+                                    .font(.system(size:14))
+                                    .frame(height:40)
+                            }
+                            .foregroundColor(Color.black.opacity(0.8))
+                            
+                            HStack {
+                                Image(systemName: "mappin.and.ellipse")
+                                
+                                Text("5.1 km")
+                                    .font(.system(size:14))
+                            }
+                            .foregroundColor(Color.black.opacity(0.8))
+                            
+                            Button {
+                                print("check in")
+                            }   label:{
+                                Text("Check In")
+                                    .frame(maxWidth: .infinity, maxHeight: 10)
+                            } .buttonStyle(.bordered)
+                                .background(LinearGradient(colors: [.red, .orange], startPoint: .topTrailing, endPoint: .bottomLeading))
+                                .cornerRadius(8)
+                                .foregroundColor(.white)
+                                .scaleEffect(animatingButton ? 0.9 : 1.0)
                         }
-                        .foregroundColor(.gray)
-                        
-                        Button {
-                            print("check in")
-                        }   label:{
-                            Text("Check In")
-                                .frame(maxWidth: .infinity, maxHeight: 10)
-                        } .buttonStyle(.bordered)
-                            .background(.orange)
-                            .cornerRadius(8)
-                            .foregroundColor(.white)
                     }
+                    .padding(8)
                 }
-                .padding(8)
-                .background(.white)
-                .cornerRadius(20)
-                .shadow(radius: 6)
                 
                 //                Card 4
-                HStack (spacing:5){
-                    VStack (spacing:10) {
-                        Image("sport")
-                            .resizable()
-                            .frame(width:110, height:110)
-                            .cornerRadius(10)
-                            .shadow(radius: 3)
-                            .offset(x:5)
-                        
-                        Text("Playground & Sports")
-                            .font(.system(size: 10, weight: .regular))
-                            .foregroundColor(Color.white)
-                            .padding(1)
-                            .frame(width:110)
-                            .background(.purple)
-                            .cornerRadius(8)
-                            .offset(x:5)
-                    }
-                    
-                    Spacer()
-                    
-                    VStack (alignment: .leading, spacing: 10) {
-                        Text("Dewantara Sport Center")
-                            .font(.system(size: 18, weight: .bold))
-                        
-                        HStack {
-                            Image(systemName: "location")
-                            
-                            Text("Jl. Buaran Raya No.62, Kota Tangerang Selatan")
-                                .font(.system(size:14))
-                                .frame(height:40)
-                        }
-                        .foregroundColor(.gray)
-                        
-                        HStack {
-                            Image(systemName: "mappin.and.ellipse")
-                                .foregroundColor(.gray)
-                            
-                            Text("8.2 km")
-                                .font(.system(size:14))
-                        }
-                        .foregroundColor(.gray)
-                        
-                        Button {
-                            print("check in")
-                        }   label:{
-                            Text("Check In")
-                                .frame(maxWidth: .infinity, maxHeight: 10)
-                        } .buttonStyle(.bordered)
-                            .background(.orange)
-                            .cornerRadius(8)
-                            .foregroundColor(.white)
-                    }
-                }
-                .padding(8)
-                .background(.white)
-                .cornerRadius(20)
-                .shadow(radius: 6)
                 
+                ZStack {
+                    Color.white.opacity(0.85)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x:0, y:10)
+                        .blur(radius: 1)
+                    
+                    HStack (spacing:5){
+                        VStack (spacing:10) {
+                            Image("sport")
+                                .resizable()
+                                .frame(width:110, height:110)
+                                .cornerRadius(10)
+                                .shadow(radius: 3)
+                                .offset(x:5)
+                            
+                            Text("Playground & Sports")
+                                .font(.system(size: 10, weight: .regular))
+                                .foregroundColor(Color.white)
+                                .padding(1)
+                                .frame(width:110)
+                                .background(.purple)
+                                .cornerRadius(8)
+                                .offset(x:5)
+                        }
+                        
+                        Spacer()
+                        
+                        VStack (alignment: .leading, spacing: 10) {
+                            Text("Dewantara Sport Center")
+                                .font(.system(size: 18, weight: .bold))
+                            
+                            HStack {
+                                Image(systemName: "location")
+                                
+                                Text("Jl. Buaran Raya No.62, Kota Tangerang Selatan")
+                                    .font(.system(size:14))
+                                    .frame(height:40)
+                            }
+                            .foregroundColor(Color.black.opacity(0.8))
+                            
+                            HStack {
+                                Image(systemName: "mappin.and.ellipse")
+                                
+                                Text("8.2 km")
+                                    .font(.system(size:14))
+                            }
+                            .foregroundColor(Color.black.opacity(0.8))
+                            
+                            Button {
+                                print("check in")
+                            }   label:{
+                                Text("Check In")
+                                    .frame(maxWidth: .infinity, maxHeight: 10)
+                            } .buttonStyle(.bordered)
+                                .background(LinearGradient(colors: [.red, .orange], startPoint: .topTrailing, endPoint: .bottomLeading))
+                                .cornerRadius(8)
+                                .foregroundColor(.white)
+                                .scaleEffect(animatingButton ? 0.9 : 1.0)
+                        }
+                    }
+                    .padding(8)
+                }
                 Spacer()
             }
             .padding()
