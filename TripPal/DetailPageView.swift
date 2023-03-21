@@ -21,40 +21,40 @@ struct DetailPageView: View {
     //MARK: - BODY
     var body: some View {
         
-        //        //MARK: - Slideshow with TabView & Animation
-        //        VStack {
-        //            //TabView untuk tampilan slideshow by SwiftUI
-        //            TabView(selection: $selection) {
-        //                ForEach(0..<4) { num in
-        //                    Image("\(images[num])")
-        //                        .resizable()
-        //                        .ignoresSafeArea()
-        //                        .scaledToFill()
-        //                } //: ForEach
-        //            } //: TabView
-        //            .tabViewStyle(PageTabViewStyle())
-        //            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-        //            .onReceive(slideshowTimer, perform: { _ in
-        //                withAnimation { // Ternary Operator
-        //                    selection = selection < 4 ? selection + 1 : 0
-        //                }//: Animation
-        //            })//: onReceive
-        //        }//: - VStack (Slideshow with TabView & Animation)
-        //        .ignoresSafeArea()
-        //        .frame(width: 400, height: 250)
+//                //MARK: - Slideshow with TabView & Animation
+//                VStack {
+//                    //TabView untuk tampilan slideshow by SwiftUI
+//                    TabView(selection: $selection) {
+//                        ForEach(0..<4) { num in
+//                            Image("\(images[num])")
+//                                .resizable()
+//                                .ignoresSafeArea()
+//                                .scaledToFill()
+//                        } //: ForEach
+//                    } //: TabView
+//                    .tabViewStyle(PageTabViewStyle())
+//                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+//                    .onReceive(slideshowTimer, perform: { _ in
+//                        withAnimation { // Ternary Operator
+//                            selection = selection < 4 ? selection + 1 : 0
+//                        }//: Animation
+//                    })//: onReceive
+//                }//: - VStack (Slideshow with TabView & Animation)
+//                .ignoresSafeArea()
+//                .frame(width: 400, height: 250)
         
         //MARK: - DETAIL PAGE SCROLLVIEW (VERTICAL)
         ScrollView(.vertical, showsIndicators: false) {
-            
+
             VStack {
                 Image("slideshow-1")
                     .resizable()
                     .frame(width: 400, height: 250)
             }
-            
+
             //MARK: - PLACES CATEGORY SCROLLVIEW (HORIZONTAL)
             ScrollView(.horizontal, showsIndicators: false) {
-                
+
                 HStack(spacing: 16) {
                     HStack {
 
@@ -63,11 +63,11 @@ struct DetailPageView: View {
                             .frame(width:50, height:50)
                             .cornerRadius(10)
                             .shadow(radius: 3)
-                        
+
                         VStack (spacing: 5) {
                             Text("Katsukita")
                                 .font(.system(size: 14, weight: .bold))
-                            
+
                             Text("Restaurant & Cafe")
                                 .font(.system(size: 10, weight: .semibold))
                                 .foregroundColor(Color.white)
@@ -81,7 +81,7 @@ struct DetailPageView: View {
                     .background(.red)
                     .cornerRadius(10)
                     .shadow(radius: 5)
-                    
+
                     HStack (spacing:10) {
 
                         Image("thebreeze")
@@ -89,11 +89,11 @@ struct DetailPageView: View {
                             .frame(width:50, height:50)
                             .cornerRadius(10)
                             .shadow(radius: 3)
-                        
+
                         VStack (spacing: 5) {
                             Text("Katsukita")
                                 .font(.system(size: 14, weight: .bold))
-                            
+
                             Text("Restaurant & Cafe")
                                 .font(.system(size: 10, weight: .semibold))
                                 .foregroundColor(Color.white)
@@ -110,7 +110,7 @@ struct DetailPageView: View {
                 }// - HSTACK WRAPPER CARD
                 .padding()
             }//: - PLACES CATEGORY SCROLLVIEW (HORIZONTAL)
-            
+
             //MARK: - BUTTON SAVE
             Button { // Action Button
                 print("saved")
