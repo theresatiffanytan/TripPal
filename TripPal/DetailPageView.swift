@@ -9,47 +9,16 @@ import SwiftUI
 
 struct DetailPageView: View {
     //MARK: - PROPERTY
-    @State private var selection = 0
-    
-    // Slideshow Timer
-    var slideshowTimer = Timer.publish(every: 4, on: .main, in: .common).autoconnect()
-    var images = ["slideshow-1",
-                  "slideshow-2",
-                  "slideshow-3",
-                  "slideshow-4"]
+    @State var friendName: String = ""
     
     //MARK: - BODY
     var body: some View {
-        
-//                //MARK: - Slideshow with TabView & Animation
-//                VStack {
-//                    //TabView untuk tampilan slideshow by SwiftUI
-//                    TabView(selection: $selection) {
-//                        ForEach(0..<4) { num in
-//                            Image("\(images[num])")
-//                                .resizable()
-//                                .ignoresSafeArea()
-//                                .scaledToFill()
-//                        } //: ForEach
-//                    } //: TabView
-//                    .tabViewStyle(PageTabViewStyle())
-//                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-//                    .onReceive(slideshowTimer, perform: { _ in
-//                        withAnimation { // Ternary Operator
-//                            selection = selection < 4 ? selection + 1 : 0
-//                        }//: Animation
-//                    })//: onReceive
-//                }//: - VStack (Slideshow with TabView & Animation)
-//                .ignoresSafeArea()
-//                .frame(width: 400, height: 250)
         
         //MARK: - DETAIL PAGE SCROLLVIEW (VERTICAL)
         ScrollView(.vertical, showsIndicators: false) {
 
             VStack {
-                Image("slideshow-1")
-                    .resizable()
-                    .frame(width: 400, height: 250)
+                Slideshow()
             }
 
             //MARK: - PLACES CATEGORY SCROLLVIEW (HORIZONTAL)
@@ -110,19 +79,60 @@ struct DetailPageView: View {
                 }// - HSTACK WRAPPER CARD
                 .padding()
             }//: - PLACES CATEGORY SCROLLVIEW (HORIZONTAL)
+            
+            //MARK: - GRID PHOTOS FOR MEMORIES
+            HStack {
+                Text("Memories")
+                    .font(.system(size: 20, weight: .semibold))
+                Spacer()
+                Image(systemName: "plus.circle.fill")
+                    .imageScale(.large)
+            }
+            .padding()
+            
+            HStack {
+                Text("Your Trip Buddy")
+                    .font(.system(size: 20, weight: .semibold))
+                Spacer()
+            }
+            .padding()
+            
+            VStack {
+                TextField(friendName, text: $friendName)
+                    .padding()
+                    .background(Color.gray.opacity(0.3).cornerRadius(10))
+                    .font(.headline)
+            }
+            .padding(.horizontal)
+            
+            HStack {
+                Text("How Do You Feel ?")
+                    .font(.system(size: 20, weight: .semibold))
+                Spacer()
+                Image(systemName: "plus.circle.fill")
+                    .imageScale(.large)
+            }
+            .padding()
 
             //MARK: - BUTTON SAVE
             Button { // Action Button
-                print("saved")
+                
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 361, height: 40)
+                        .padding(.horizontal)
+                        .frame(height: 40)
+                        
                     Text("Save")
                         .foregroundColor(.white)
                 } //: - ZStack with RoundedRectangle
             }
         }
+    }
+    
+    //MARK: - FUNCTIONS
+    func saveText() {
+        
     }
 }
 
