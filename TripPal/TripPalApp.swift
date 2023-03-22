@@ -11,7 +11,7 @@ import SwiftUI
 struct TripPalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DetailPageView()
         }
     }
 }
