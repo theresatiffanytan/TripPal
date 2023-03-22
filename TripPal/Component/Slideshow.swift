@@ -19,7 +19,7 @@ struct Slideshow: View {
                   "slideshow-4"]
     
     var body: some View {
-        //MARK: - Slideshow with TabView & Animation
+        //MARK: - VStack Slideshow with TabView & Animation
         VStack {
             //TabView untuk tampilan slideshow by SwiftUI
             TabView(selection: $selection) {
