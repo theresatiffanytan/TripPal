@@ -1,10 +1,10 @@
 <!-- ABOUT THE PROJECT -->
 <p align="center">
-  <a href="#" target="_blank"><img src="TripPals.png" width="200"></a>
+  <a href="#" target="_blank"><img src="TripPal.png" width="200"></a>
 </p>
 
-# Foody
-Aplikasi Foody adalah Aplikasi iOS . Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37).
+# TripPal
+Aplikasi TripPal adalah Aplikasi iOS . Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37).
 
 ### Preview
 <p align="center">
@@ -15,7 +15,7 @@ Aplikasi Foody adalah Aplikasi iOS . Klik hyperlink ini untuk melihat [Prototype
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
 ## Folder & File Structure
-Berikut struktur file dan folder pada TripPals:
+Berikut struktur file dan folder pada TripPal:
 
     .
     ├── TripPals.swift          # Root Project: Konfigurasi ContentView
@@ -43,7 +43,7 @@ Berikut struktur file dan folder pada TripPals:
 * [Swift](https://www.swift.org/documentation/)
 * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
 * [Xcode](https://developer.apple.com/xcode/)
-* [Figma](https://www.figma.com/file/CeATh4s9pEvlbINBcEF6kk/Foody-UI-Design?node-id=0%3A1)
+* [Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37)
 
 <!-- How to Install -->
 ## Installation
