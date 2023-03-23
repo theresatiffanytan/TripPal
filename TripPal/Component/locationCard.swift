@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct locationCard: View {
+    @State private var action: Int? = 0
     @State private var animatingButton1: Bool = false
     @State var buttonIsPressed1: Bool = false
     @State private var animatingButton2: Bool = false
@@ -21,6 +22,9 @@ struct locationCard: View {
         
             // START - VStack Locations Card
             VStack (spacing: 20){
+                
+                // Navigation Link for each location
+                NavigationLink(destination: searchBar(), tag: 1, selection: $action) {EmptyView()}
                 
                 //MARK: Card 1
                 // START - ZStack Glassmorphism Card The Breeze
@@ -85,12 +89,19 @@ struct locationCard: View {
                                     animatingButton1.toggle()
                                 }
                                 animatingButton1.toggle()
+                                //Navigation Link Tag 1
+                                self.action = 1
                             }label:
-                            {Text(buttonIsPressed1 ? "Checked In" : "Check In")
+                            {   // NavLink untuk text
+                                //NavigationLink(
+                                //(buttonIsPressed1 ? "Checked In" : "Check In"), destination: searchBar())
+                                
+                                Text(buttonIsPressed1 ? "Checked In" : "Check In")
                                     .frame(maxWidth: .infinity, maxHeight: 10)
-                                NavigationLink("Details", destination: searchBar())
-                            }
-                            .buttonStyle(.bordered)
+                                
+                                // NavLink untuk 2 button terpisah
+                                // NavigationLink("Details", destination: searchBar())
+                            }.buttonStyle(.bordered)
                             .background(buttonIsPressed1 ? LinearGradient(colors: [.blue, .purple], startPoint: .topTrailing, endPoint: .bottomLeading) : LinearGradient(colors: [.red, .orange], startPoint: .topTrailing, endPoint: .bottomLeading))
                             .cornerRadius(8)
                             .foregroundColor(.white)
@@ -332,7 +343,7 @@ struct locationCard: View {
                 } // END - ZStack Glassmorphism Card Sport Center
                 Spacer()
             } // END - VStack Locations Card
-            .offset(y:45)
+            .offset(y:25)
     }
 }
 
