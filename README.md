@@ -1,10 +1,10 @@
 <!-- ABOUT THE PROJECT -->
 <p align="center">
-  <a href="#" target="_blank"><img src="Foody.png" width="200"></a>
+  <a href="#" target="_blank"><img src="TripPal.png" width="200"></a>
 </p>
 
-# Foody
-Aplikasi Foody adalah Aplikasi iOS Pemesanan Makanan dengan SwiftUI, WidgetKit, Google Fonts, dan Assets dari Figma untuk Mempelajari Ilmu Frontend iOS. Klik hyperlink ini untuk melihat [Prototype Figma](https://www.figma.com/file/CeATh4s9pEvlbINBcEF6kk/Foody-UI-Design?node-id=0%3A1).
+# TripPal
+Aplikasi TripPal adalah Aplikasi iOS . Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37).
 
 ### Preview
 <p align="center">
@@ -15,10 +15,10 @@ Aplikasi Foody adalah Aplikasi iOS Pemesanan Makanan dengan SwiftUI, WidgetKit, 
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
 ## Folder & File Structure
-Berikut struktur file dan folder pada Foody:
+Berikut struktur file dan folder pada TripPal:
 
     .
-    ├── FoodyApp.swift          # Root Project: Konfigurasi ContentView
+    ├── TripPals.swift          # Root Project: Konfigurasi ContentView
     ├── Info.plist              # Fonts Provided by Aplication: Poppins-(Regular, Medium, SemiBold, dan Bold)
     ├── ContentView.swift       # Tampilan Beranda Aplikasi
     ├── Assets                  # Aset Logo, Icon, Gambar, dan Warna
@@ -43,7 +43,7 @@ Berikut struktur file dan folder pada Foody:
 * [Swift](https://www.swift.org/documentation/)
 * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
 * [Xcode](https://developer.apple.com/xcode/)
-* [Figma](https://www.figma.com/file/CeATh4s9pEvlbINBcEF6kk/Foody-UI-Design?node-id=0%3A1)
+* [Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37)
 
 <!-- How to Install -->
 ## Installation
@@ -51,7 +51,7 @@ Untuk menggunakan repositori ini, ikutilah petunjuk penggunaan berikut dan pasti
 
 1. Lakukan download .zip atau `clone` repositori dengan cara:
 ```bash
-git clone https://github.com/dekapd99/Foody.git
+git clone https://github.com/theresatiffanytan/TripPal.git
 ```
 
 2. Jika sudah silahkan buka Project di Xcode.

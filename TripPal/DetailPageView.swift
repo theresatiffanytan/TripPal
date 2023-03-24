@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DetailPageView: View {
     //MARK: - PROPERTY
-    @State var friendName: String = ""
+    @State private var friendName: String = ""
+    @StateObject var vm = ViewModel()
     
     //MARK: - BODY
     var body: some View {
@@ -23,60 +24,11 @@ struct DetailPageView: View {
 
             //MARK: - PLACES CATEGORY SCROLLVIEW (HORIZONTAL)
             ScrollView(.horizontal, showsIndicators: false) {
-
                 HStack(spacing: 16) {
-                    HStack {
-
-                        Image("thebreeze")
-                            .resizable()
-                            .frame(width:50, height:50)
-                            .cornerRadius(10)
-                            .shadow(radius: 3)
-
-                        VStack (spacing: 5) {
-                            Text("Katsukita")
-                                .font(.system(size: 14, weight: .bold))
-
-                            Text("Restaurant & Cafe")
-                                .font(.system(size: 10, weight: .semibold))
-                                .foregroundColor(Color.white)
-                                .padding(2)
-                                .frame(width:110)
-                                .background(.blue)
-                                .cornerRadius(8)
-                        }
-                    }// - HSTACK CARD 1
-                    .padding(8)
-                    .background(.red)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-
-                    HStack (spacing:10) {
-
-                        Image("thebreeze")
-                            .resizable()
-                            .frame(width:50, height:50)
-                            .cornerRadius(10)
-                            .shadow(radius: 3)
-
-                        VStack (spacing: 5) {
-                            Text("Katsukita")
-                                .font(.system(size: 14, weight: .bold))
-
-                            Text("Restaurant & Cafe")
-                                .font(.system(size: 10, weight: .semibold))
-                                .foregroundColor(Color.white)
-                                .padding(2)
-                                .frame(width:110)
-                                .background(.blue)
-                                .cornerRadius(8)
-                        }
-                    } // - HSTACK CARD 2
-                    .padding(8)
-                    .background(.green)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-                }// - HSTACK WRAPPER CARD
+                    ForEach(vm.data) { item in
+                        CategoryCard(model: item)
+                    }
+                }
                 .padding()
             }//: - PLACES CATEGORY SCROLLVIEW (HORIZONTAL)
             
@@ -88,7 +40,19 @@ struct DetailPageView: View {
                 Image(systemName: "plus.circle.fill")
                     .imageScale(.large)
             }
-            .padding()
+            .padding(.horizontal)
+            
+            //MARK: - GRID PHOTOS WITH SCROLLVIEW (HORIZONTAL)
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHGrid(rows:[GridItem(.adaptive(minimum: 100), spacing: 1.2)]) {
+                    ForEach(feedData) { item in
+                        GridImage(feed: item)
+                            .frame(width: 100, height: 100)
+                            .clipped()
+                    }
+                }
+                .padding(.horizontal)
+            }//: - GRID PHOTOS WITH SCROLLVIEW (HORIZONTAL)
             
             HStack {
                 Text("Your Trip Buddy")
@@ -126,14 +90,14 @@ struct DetailPageView: View {
                     Text("Save")
                         .foregroundColor(.white)
                 } //: - ZStack with RoundedRectangle
-            }
-        }
-    }
+            }//: - Button Label
+        }//: - SCROLLVIEW (DETAIL PAGE)
+        .background(Color("softGray").opacity(0.1))
+        
+    }//: - BODY
     
     //MARK: - FUNCTIONS
-    func saveText() {
-        
-    }
+
 }
 
 //MARK: - PREVIEW
