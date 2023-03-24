@@ -17,6 +17,9 @@ struct locationCard: View {
     @State var buttonIsPressed3: Bool = false
     @State private var animatingButton4: Bool = false
     @State var buttonIsPressed4: Bool = false
+    @Binding var counter: Int
+    @Binding var target: Int
+    
     
     var body: some View {
         
@@ -91,16 +94,14 @@ struct locationCard: View {
                                 animatingButton1.toggle()
                                 //Navigation Link Tag 1
                                 self.action = 1
+                                //Counting locations visited
+                                self.counter += 1
+                                //Counting target left until next milestone
+                                self.target -= 1
                             }label:
-                            {   // NavLink untuk text
-                                //NavigationLink(
-                                //(buttonIsPressed1 ? "Checked In" : "Check In"), destination: searchBar())
-                                
-                                Text(buttonIsPressed1 ? "Checked In" : "Check In")
+                            { Text(buttonIsPressed1 ? "Checked In" : "Check In")
                                     .frame(maxWidth: .infinity, maxHeight: 10)
                                 
-                                // NavLink untuk 2 button terpisah
-                                // NavigationLink("Details", destination: searchBar())
                             }.buttonStyle(.bordered)
                             .background(buttonIsPressed1 ? LinearGradient(colors: [.blue, .purple], startPoint: .topTrailing, endPoint: .bottomLeading) : LinearGradient(colors: [.red, .orange], startPoint: .topTrailing, endPoint: .bottomLeading))
                             .cornerRadius(8)
@@ -349,6 +350,6 @@ struct locationCard: View {
 
 struct locationCard_Previews: PreviewProvider {
     static var previews: some View {
-        locationCard()
+        locationCard(counter: .constant(0), target: .constant(5))
     }
 }

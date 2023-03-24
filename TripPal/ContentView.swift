@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var counter: Int = 0
+    @State var target: Int = 5
     
     var body: some View {
         NavigationView{
@@ -24,13 +26,13 @@ struct ContentView: View {
                             .padding(.top,-13)
                             .opacity(0.8)
                         
-                        scoringCard()
+                        scoringCard(counter: $counter, target:$target)
                         
                         searchBar()
                     } // END - ZStack background
                     .padding(.top, 25)
                     
-                    locationCard()
+                    locationCard(counter: $counter, target:$target)
                     
                 } // END - VStack Home Page
                 .padding()
