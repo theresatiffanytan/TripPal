@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F048D1529CB53BE00B56848 /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F048D1429CB53BE00B56848 /* searchBar.swift */; };
+		0F048D1729CB54FA00B56848 /* scoringCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F048D1629CB54FA00B56848 /* scoringCard.swift */; };
+		0F048D1929CB557500B56848 /* locationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F048D1829CB557500B56848 /* locationCard.swift */; };
 		2A45D11429CB3A15003058AB /* Slideshow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45D11329CB3A15003058AB /* Slideshow.swift */; };
 		2AD3E39229C6E9F100553BC9 /* TripPalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3E39129C6E9F100553BC9 /* TripPalApp.swift */; };
 		2AD3E39429C6E9F100553BC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3E39329C6E9F100553BC9 /* ContentView.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F048D1429CB53BE00B56848 /* searchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchBar.swift; sourceTree = "<group>"; };
+		0F048D1629CB54FA00B56848 /* scoringCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoringCard.swift; sourceTree = "<group>"; };
+		0F048D1829CB557500B56848 /* locationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationCard.swift; sourceTree = "<group>"; };
 		2A45D11329CB3A15003058AB /* Slideshow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slideshow.swift; sourceTree = "<group>"; };
 		2AD3E38E29C6E9F100553BC9 /* TripPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD3E39129C6E9F100553BC9 /* TripPalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPalApp.swift; sourceTree = "<group>"; };
@@ -46,6 +52,9 @@
 				2AFAAABA29CB2C5D00AED5D4 /* CategoryCard.swift */,
 				2AFAAABE29CB2D7900AED5D4 /* GridPhotos.swift */,
 				2A45D11329CB3A15003058AB /* Slideshow.swift */,
+				0F048D1429CB53BE00B56848 /* searchBar.swift */,
+				0F048D1629CB54FA00B56848 /* scoringCard.swift */,
+				0F048D1829CB557500B56848 /* locationCard.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -160,9 +169,12 @@
 				2A45D11429CB3A15003058AB /* Slideshow.swift in Sources */,
 				2AD3E3A029C6EA3700553BC9 /* DetailPageView.swift in Sources */,
 				2AD3E39429C6E9F100553BC9 /* ContentView.swift in Sources */,
+				0F048D1729CB54FA00B56848 /* scoringCard.swift in Sources */,
 				2AFAAABB29CB2C5D00AED5D4 /* CategoryCard.swift in Sources */,
 				2AFAAABF29CB2D7900AED5D4 /* GridPhotos.swift in Sources */,
 				2AD3E39229C6E9F100553BC9 /* TripPalApp.swift in Sources */,
+				0F048D1529CB53BE00B56848 /* searchBar.swift in Sources */,
+				0F048D1929CB557500B56848 /* locationCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
