@@ -25,9 +25,10 @@ struct locationCard: View {
         
             // START - VStack Locations Card
             VStack (spacing: 20){
+                Text("\(counter)")
                 
                 // Navigation Link for each location
-                NavigationLink(destination: searchBar(), tag: 1, selection: $action) {EmptyView()}
+                NavigationLink(destination: DetailPageView(), tag: 1, selection: $action) {EmptyView()}
                 
                 //MARK: Card 1
                 // START - ZStack Glassmorphism Card The Breeze

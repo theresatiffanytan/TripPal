@@ -9,6 +9,7 @@ import SwiftUI
 
 struct searchBar: View {
     @State private var searchText: String = ""
+    let vm: ViewModelHome
     
     var body: some View {
         
@@ -31,6 +32,9 @@ struct searchBar: View {
                             searchText = ""
                         }, alignment: .trailing
                 ) // END - Adding X Mark
+                .onChange(of: searchText) { newValue in
+                    vm.filterData(keyword: newValue)
+                }
         } // END - HStack Search Bar
         .font(.headline)
         .padding()
@@ -43,6 +47,6 @@ struct searchBar: View {
 
 struct searchBar_Previews: PreviewProvider {
     static var previews: some View {
-        searchBar()
+        searchBar(vm: ViewModelHome())
     }
 }
