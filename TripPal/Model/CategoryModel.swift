@@ -14,9 +14,10 @@ struct categoryModel: Identifiable {
     var image: UIImage
 }
 
-class ViewModel: ObservableObject {
+class ViewModelDetail: ObservableObject {
     @Published var data: [categoryModel] = [
     categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "slideshow-1")),
+    categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "slideshow-2")),
     categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "slideshow-2"))
     ]
 }

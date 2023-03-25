@@ -10,7 +10,9 @@ import SwiftUI
 struct DetailPageView: View {
     //MARK: - PROPERTY
     @State private var friendName: String = ""
-    @StateObject var vm = ViewModel()
+    @State private var dataArray: [String] = []
+    
+    @StateObject private var vm = ViewModelDetail()
     
     //MARK: - BODY
     var body: some View {
@@ -57,30 +59,33 @@ struct DetailPageView: View {
             HStack {
                 Text("Your Trip Buddy")
                     .font(.system(size: 20, weight: .semibold))
-                Spacer()
+                    Spacer()
             }
             .padding()
             
             VStack {
-                TextField(friendName, text: $friendName)
+                TextField("Friend Name", text: $friendName)
                     .padding()
-                    .background(Color.gray.opacity(0.3).cornerRadius(10))
+                    .background(Color.gray.opacity(0.2).cornerRadius(10))
                     .font(.headline)
             }
             .padding(.horizontal)
-            
-            HStack {
-                Text("How Do You Feel ?")
-                    .font(.system(size: 20, weight: .semibold))
-                Spacer()
-                Image(systemName: "plus.circle.fill")
-                    .imageScale(.large)
-            }
-            .padding()
 
+            // MARK: - FOR EACH SHOW FRIENDS NAME
+            ForEach(dataArray, id: \.self) { friendName in
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color.gray.opacity(0.3))
+                        .padding(.horizontal)
+                        .frame(height: 40)
+                        
+                    Text(friendName)
+                } //: - ZStack with RoundedRectangle
+            }
+            
             //MARK: - BUTTON SAVE
             Button { // Action Button
-                
+                saveText()
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
@@ -91,13 +96,16 @@ struct DetailPageView: View {
                         .foregroundColor(.white)
                 } //: - ZStack with RoundedRectangle
             }//: - Button Label
+            .padding(.vertical)
         }//: - SCROLLVIEW (DETAIL PAGE)
         .background(Color("softGray").opacity(0.1))
         
     }//: - BODY
     
     //MARK: - FUNCTIONS
-
+    func saveText() {
+        dataArray.append(friendName)
+    }
 }
 
 //MARK: - PREVIEW
