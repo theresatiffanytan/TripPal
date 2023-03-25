@@ -83,6 +83,8 @@ struct DetailPageView: View {
                 } //: - ZStack with RoundedRectangle
             }
             
+            //MARK: - REVIEWS WITH MASK
+            
             //MARK: - BUTTON SAVE
             Button { // Action Button
                 saveText()
