@@ -9,7 +9,7 @@ Aplikasi TripPal adalah Aplikasi iOS . Klik hyperlink ini untuk melihat [Prototy
 ### Preview
 <p align="center">
   <a href="#" target="_blank"><img src="1.png" width="200"></a>
-  <a href="#" target="_blank"><img src="2.mp4" width="200"></a>
+  <a href="#" target="_blank"><img src="2.gif" width="200"></a>
   <a href="#" target="_blank"><img src="3.png" width="200"></a>
 </p>
 
@@ -20,9 +20,9 @@ Berikut struktur file dan folder pada TripPal:
     .
     ├── TripPals.swift          # Root Project: Konfigurasi ContentView
     ├── Info.plist              # Fonts Provided by Aplication: Poppins-(Regular, Medium, SemiBold, dan Bold)
-    ├── ContentView.swift       # Tampilan Beranda Aplikasi
-    ├── Assets                  # Aset Logo, Icon, Gambar, dan Warna
-    ├── GetStartedView.swift    # Berisikan Halaman Get Started (Frontend Only)
+    ├── ContentView.swift       # Tampilan Home Page
+    ├── Assets                  # Aset Logo & Gambar
+    ├── DetailPageView.swift    # Tampilan Detail Page
     ├── HomeView.swift          # Berisikan Halaman Home / Beranda (Frontend Only)
     ├── GyozaDetailView.swift   # Berisikan Halaman Gyoza Food Detail (Frontend Only)
     ├── OrangeDetailView.swift  # Berisikan Halaman Orange Food Detail (Frontend Only)
@@ -32,10 +32,17 @@ Berikut struktur file dan folder pada TripPal:
 <!-- List of Features -->
 ## Features:
 
-* Widgets & Properties
-* Basic Navigations with Group & onTapGesture
-* Declarative UI with @State
-* Importation Assets from Figma & Google Fonts
+* Reusable Components
+* Photo Picker with PhotoUI (Upload Images)
+* Grid Layout (Horizontal)
+* All Stacks (HStack, VStack, ZStack)
+* All ScrollView (Horizontal & Vertical)
+* Rating with Mask
+* Slideshow with TabView
+* Search Bar
+* Basic Navigations with Navigation Link
+* Declarative UI with @State & @Binding
+* Importation Assets from Sketch for Image Assets
 
 <!-- Used Tools -->
 ## Build With:
@@ -54,12 +61,18 @@ Untuk menggunakan repositori ini, ikutilah petunjuk penggunaan berikut dan pasti
 git clone https://github.com/theresatiffanytan/TripPal.git
 ```
 
-2. Jika sudah silahkan buka Project di Xcode.
+2. Jika sudah Download / Clone Project silahkan buka Project di Xcode dengan Klik Open a Project or File.
 3. Pastikan untuk memilih iPhone pada Target Simulator (Kolom Device dibagian atas Xcode). 
 4. Build & Run
 
+Anggota Kelompok 22 (Nano Challenge 1) Apple Academy Indonesia Cohort 6 yang berkontribusi dalam pengerjaan proyek terdiri dari :
+* [Theresa Tiffany](https://github.com/anfrhana)
+* [Deka Primatio Deandra](https://www.github.com/dekapd99)
+* [Gery](https://github.com/B0ndan)
+
 <!-- What Kind of License? -->
 ## License
-MIT License: Copyright (c) 2022 DK
+MIT License: Copyright (c) 2022 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
