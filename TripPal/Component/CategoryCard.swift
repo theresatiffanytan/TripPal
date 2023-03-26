@@ -40,7 +40,7 @@ struct CategoryCard: View {
             .padding(8)
             .background(.white)
             .cornerRadius(10)
-            .shadow(radius: 5)
+            .shadow(color: Color.black.opacity(0.2), radius: 4, x:0, y:4)
         }//: - HSTACK MAIN WRAPPER
     }//: - BODY CONTENT
 }
