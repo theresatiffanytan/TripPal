@@ -36,7 +36,7 @@ struct ContentView: View {
                     
 //                    Spacer(minLength: 15)
                     
-                    locationCard(counter: .constant(0), target: .constant(5))
+                    locationCard(counter: $counter, target: $target)
                     
 //                    //MARK: - FOREACH MAIN CARD
 //                    ForEach (vm.filteredData) { item in
