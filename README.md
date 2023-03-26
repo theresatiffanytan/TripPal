@@ -9,7 +9,7 @@ Aplikasi TripPal adalah Aplikasi iOS . Klik hyperlink ini untuk melihat [Prototy
 ### Preview
 <p align="center">
   <a href="#" target="_blank"><img src="1.png" width="200"></a>
-  <a href="#" target="_blank"><img src="2.png" width="200"></a>
+  <a href="#" target="_blank"><img src="2.mp4" width="200"></a>
   <a href="#" target="_blank"><img src="3.png" width="200"></a>
 </p>
 
