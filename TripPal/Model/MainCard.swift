@@ -34,7 +34,7 @@ class ViewModelHome: ObservableObject {
     
     func filterData(keyword: String){
         // Make the filter logic
-        for filteredData in 1...4 {
-        }
+            
+        
     }
 }
