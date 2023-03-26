@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct scoringCard: View {
+    //MARK: - PROPERTY
     @Binding var counter: Int
     @Binding var target: Int
-
+    
+    //MARK: - BODY CONTENT
     var body: some View {
-        
-        // START - ZSTack Scoring Card (Glassmorph)
+        //MARK: - ZSTACK SCORING CARD (GLASSMORPHISM) WRAPPER
         ZStack {
             Color.white.opacity(0.85)
                 .cornerRadius(20)
@@ -21,10 +22,9 @@ struct scoringCard: View {
                 .blur(radius: 1)
                 .frame(width:365, height:170)
             
-            // START - HStack Scoring Card Component
-            HStack (spacing:5){
-                
-                // Logo TripPal
+            //MARK: - HSTACK SCORING CARD CONTENT
+            HStack(spacing:5) {
+                // TripPal Logo
                 Image("iconHome")
                     .resizable()
                     .frame(width:130, height:130)
@@ -34,11 +34,11 @@ struct scoringCard: View {
                 
                 Spacer()
                 
-                // START - VStack Scoring Title and Details
-                VStack (alignment: .leading, spacing: 10) {
-                    
+                //MARK: - VSTACK COPY WRITING
+                VStack(alignment: .leading, spacing: 10) {
                     Text("Your Milestone")
                         .font(.system(size: 18, weight: .bold))
+                    
                     Text("Newcomer")
                         .font(.system(size: 14, weight: .bold))
                         .frame(width:120, height: 20)
@@ -46,35 +46,36 @@ struct scoringCard: View {
                         .cornerRadius(20)
                         .foregroundColor(.white)
                     
-                    // START - HStack Emo and Text Scoring Line1
+                    // HSTACK ICON & PLACES CHECKED IN
                     HStack {
                         Image(systemName: "location.north.circle")
                         
                         Text("\(counter) places checked in")
                             .font(.system(size:16, weight: .bold))
                             .frame(height:20)
-                    } // END - HStack Emo and Text Scoring
+                    }//: - HSTACK ICON & PLACES CHECKED IN
                     .foregroundColor(Color.black.opacity(0.8))
                     
                     Divider()
                     
-                    // START - HStack Emo and Text Scoring Line2
+                    // HSTACK FOR TARGET GOALS FOR NEXT LEVEL
                     HStack {
                         Text("\(target) more places to go until you reach the next milestone !")
                             .font(.system(size:14))
                             .bold()
-                    } // END - HStack Emo and Text Scoring
+                    }//: - HSTACK FOR TARGET GOALS FOR NEXT LEVEL
                     .foregroundColor(Color.black.opacity(0.8))
-                } // END - VStack scoring Title and Details
-            } // END - HStack Scoring Card Component
+                }//: - VSTACK COPY WRITING
+            }//: - HSTACK SCORING CARD CONTENT
             .padding(8)
-        } // END - ZSTack Scoring Card (Glassmorph)
+        } //: - ZSTACK SCORING CARD (GLASSMORPHISM) WRAPPER
         .offset(y:-35)
-    }
+    }//: - BODY CONTENT
 }
 
 struct scoringCard_Previews: PreviewProvider {
     static var previews: some View {
+        //DEFAULT VALUES FOR SCORING CARD
         scoringCard(counter: .constant(0), target: .constant(5))
     }
 }

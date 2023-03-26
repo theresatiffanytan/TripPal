@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-import Combine
+//import Combine
 
+//DATA TYPE DECLARATION FOR MAIN CARD (ContentView)
 struct cardModel: Identifiable {
     let id = UUID()
     let title: String
@@ -17,6 +18,7 @@ struct cardModel: Identifiable {
     let category: String
 }
 
+//LIST OF DATA FOR EACH MAIN CARD
 class ViewModelHome: ObservableObject {
     let data: [cardModel] = [
         cardModel(title: "The Breeze", image: UIImage(imageLiteralResourceName: "thebreeze"), address: "Jl. BSD Green Office Park, Kabupaten Tangerang", distance: "650 M", category: "Restaurant & Cafe"),
@@ -33,8 +35,7 @@ class ViewModelHome: ObservableObject {
     ]
     
     func filterData(keyword: String){
-        // Make the filter logic
-            
+        //TODO: - Make the filter logic
         
     }
 }

@@ -8,42 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    //MARK: - PROPERTY
     @State var counter: Int = 0
     @State var target: Int = 5
     @StateObject private var vm = ViewModelHome()
     
     var body: some View {
+        // MARK: - NAVIGATION VIEW WRAPPER
         NavigationView{
-            // START - Scroll View
-            ScrollView {
-                
-                // START - VStack Home Page
+            //MARK: - V. SCROLLVIEW FOR MAIN CONTENT
+            ScrollView(.vertical, showsIndicators: false) {
+                //MARK: - VSTACK WRAPPER FOR ALL CONTENT
                 VStack (spacing: 20) {
-                    
-                    // START - ZStack background
+                    // MARK: - ZSTACK BACKGROUND
                     ZStack {
-                        Image("bg")
+                        Image("background")
                             .frame(width:360, height: 100)
                             .padding(.top,-13)
                             .opacity(0.8)
                         
+                        //MARK: - SCORING CARD
                         scoringCard(counter: $counter, target:$target)
                         
                         searchBar(vm: vm)
-                    } // END - ZStack background
+                    } //: - ZSTACK BACKGROUND
                     .padding(.top, 25)
                     
-                    Spacer(minLength: 15)
+//                    Spacer(minLength: 15)
                     
-                    ForEach (vm.filteredData) { item in
-                        Card(counter: $counter, target: $target, model1: item)
-                    }
+                    locationCard(counter: .constant(0), target: .constant(5))
                     
-                    
-                } // END - VStack Home Page
+//                    //MARK: - FOREACH MAIN CARD
+//                    ForEach (vm.filteredData) { item in
+//                        Card(counter: $counter, target: $target, model1: item)
+//                    }//: - FOREACH MAIN CARD
+                }//: - VSTACK WRAPPER FOR ALL CONTENT
                 .padding()
-            } // END - Scroll View
-        }
+            } //: - V. SCROLLVIEW FOR MAIN CONTENT
+        }//: - NAVIGATION VIEW WRAPPER
     } // END - Body View
 } // END - View
 

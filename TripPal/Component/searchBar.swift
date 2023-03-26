@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct searchBar: View {
+    
+    //MARK: - PROPERTY
     @State private var searchText: String = ""
     let vm: ViewModelHome
     
+    //MARK: - BODY CONTENT
     var body: some View {
-        
-        // START - HStack Search Bar
+        //MARK: - HSTACK SEARCH BAR
         HStack {
-            // Icon Magnifyingglass
             Image(systemName: "magnifyingglass")
-                .foregroundColor(searchText.isEmpty ? Color.secondary : Color.blue)
-            // Text Default
-            TextField("search by text...", text: $searchText)
-                .foregroundColor(.gray)
-                // BEGIN - Adding X Mark
+                .foregroundColor(searchText.isEmpty ? Color.secondary : Color.black)
+            
+            TextField("Search by name...", text: $searchText)
+                .foregroundColor(Color.black)
+            //MARK: - OVERLAY X MARK FOR DELETE CURRENT TEXT
                 .overlay(
                     Image(systemName: "xmark.circle.fill")
                         .padding()
@@ -31,18 +32,20 @@ struct searchBar: View {
                         .onTapGesture {
                             searchText = ""
                         }, alignment: .trailing
-                ) // END - Adding X Mark
+                ) //: - OVERLAY X MARK FOR DELETE CURRENT TEXT
                 .onChange(of: searchText) { newValue in
+                    //TODO: - Search Function by String Comparisons
                     vm.filterData(keyword: newValue)
                 }
-        } // END - HStack Search Bar
+        } //: - HSTACK SEARCH BAR
         .font(.headline)
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 23)
                 .fill(Color.white)
                 .shadow(radius: 4,x: 0, y: 0))
-        .offset(y:90)    }
+        .offset(y:90)
+    }//: - BODY CONTENT
 }
 
 struct searchBar_Previews: PreviewProvider {
