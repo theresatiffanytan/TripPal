@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var counter: Int = 0
+    @State var target: Int = 5
+    @StateObject private var vm = ViewModelHome()
     
     var body: some View {
         NavigationView{
@@ -24,27 +27,32 @@ struct ContentView: View {
                             .padding(.top,-13)
                             .opacity(0.8)
                         
-                        scoringCard()
+                        scoringCard(counter: $counter, target:$target)
                         
-                        searchBar()
+                        searchBar(vm: vm)
                     } // END - ZStack background
                     .padding(.top, 25)
                     
-                    locationCard()
+                    Spacer(minLength: 15)
+                    
+                    ForEach (vm.filteredData) { item in
+                        Card(counter: $counter, target: $target, model1: item)
+                    }
+                    
                     
                 } // END - VStack Home Page
                 .padding()
             } // END - Scroll View
         }
-        } // END - Body View
-    } // END - View
-    
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+    } // END - Body View
+} // END - View
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
-    
+}
+
 
 

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct scoringCard: View {
+    @Binding var counter: Int
+    @Binding var target: Int
+
     var body: some View {
         
         // START - ZSTack Scoring Card (Glassmorph)
@@ -47,7 +50,7 @@ struct scoringCard: View {
                     HStack {
                         Image(systemName: "location.north.circle")
                         
-                        Text("2 places checked in")
+                        Text("\(counter) places checked in")
                             .font(.system(size:16, weight: .bold))
                             .frame(height:20)
                     } // END - HStack Emo and Text Scoring
@@ -57,8 +60,9 @@ struct scoringCard: View {
                     
                     // START - HStack Emo and Text Scoring Line2
                     HStack {
-                        Text("3 more places to go until you reach the next milestone !")
+                        Text("\(target) more places to go until you reach the next milestone !")
                             .font(.system(size:14))
+                            .bold()
                     } // END - HStack Emo and Text Scoring
                     .foregroundColor(Color.black.opacity(0.8))
                 } // END - VStack scoring Title and Details
@@ -71,6 +75,6 @@ struct scoringCard: View {
 
 struct scoringCard_Previews: PreviewProvider {
     static var previews: some View {
-        scoringCard()
+        scoringCard(counter: .constant(0), target: .constant(5))
     }
 }
