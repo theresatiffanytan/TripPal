@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Slideshow: View {
     //MARK: - PROPERTY
-    @State private var selection = 0 // Dimulai dari gambar 0 (pertama)
+    @State private var selection = 0 //Start with index No. 0 (first image)
     
     // Slideshow Timer, slide for every 4 sec
     var slideshowTimer = Timer.publish(every: 4, on: .main, in: .common).autoconnect()
@@ -26,7 +26,6 @@ struct Slideshow: View {
                 ForEach(0..<4) { num in
                     Image("\(images[num])")
                         .resizable()
-                        .ignoresSafeArea()
                         .scaledToFill()
                 } //: ForEach
             } //: TabView

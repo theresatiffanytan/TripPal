@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//DATA TYPE DECLARATION FOR CARD CATEGORY (DetailPageView)
 struct categoryModel: Identifiable {
     let id = UUID()
     let title: String
@@ -14,10 +15,12 @@ struct categoryModel: Identifiable {
     var image: UIImage
 }
 
-class ViewModel: ObservableObject {
+//LIST OF DATA FOR EACH CARD
+class ViewModelDetail: ObservableObject {
     @Published var data: [categoryModel] = [
-    categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "slideshow-1")),
-    categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "slideshow-2"))
+        categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "category-1")),
+        categoryModel(title: "Hachi Grill", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "category-2")),
+        categoryModel(title: "Subway", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "category-3"))
     ]
 }
 

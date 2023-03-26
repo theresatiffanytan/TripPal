@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct CategoryCard: View {
+    //MARK: - PROPERTY
+    //Getting Data Type from categoryModel
     var model: categoryModel
     
+    //MARK: - BODY CONTENT
     var body: some View {
+        //MARK: - HSTACK MAIN WRAPPER
         HStack(spacing: 16) {
+            //MARK: - HSTACK LAYOUT For IMAGE, TITLE, & CATEGORY
             HStack {
-                
                 Image(uiImage: model.image)
                     .resizable()
                     .frame(width:50, height:50)
@@ -32,17 +36,19 @@ struct CategoryCard: View {
                         .background(.blue)
                         .cornerRadius(8)
                 }
-            }// - HSTACK CARD
+            }//: - HSTACK LAYOUT For IMAGE, TITLE, & CATEGORY
             .padding(8)
             .background(.white)
             .cornerRadius(10)
             .shadow(radius: 5)
-        }
-    }
+        }//: - HSTACK MAIN WRAPPER
+    }//: - BODY CONTENT
 }
 
 struct CategoryCard_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryCard(model: categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "slideshow-1")))
+        //DEFAULT VALUE FOR CATEGORY CARD
+        CategoryCard(model: categoryModel(title: "Katsukita", category: "Restaurant & Cafe", image: UIImage(imageLiteralResourceName: "category-1")))
+            .previewLayout(.sizeThatFits)
     }
 }
