@@ -92,7 +92,6 @@ Tiffany DK Gery
 
 DISCLAIMER: ASSETS ARE USED FOR EDUCATION PURPOSE ONLY, NOT FOR COMMERCIAL PURPOSES
 
-Assets Source: GOOGLE IMAGE (GOOGLE REVIEWS)
-[SF SYMBOLS 4 ICON](https://developer.apple.com/sf-symbols/)
+Assets Source: GOOGLE IMAGE (GOOGLE REVIEWS) & [SF SYMBOLS 4 ICON](https://developer.apple.com/sf-symbols/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
