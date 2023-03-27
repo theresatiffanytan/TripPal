@@ -1,10 +1,13 @@
 <!-- ABOUT THE PROJECT -->
-<p align="center">
-  <a href="#" target="_blank"><img src="TripPal.png" width="200"></a>
-</p>
+<h1 align="center">
+  <br>
+    <a href="#" target="_blank"><img src="TripPal.png" width="200"></a>
+  <br>
+  <p>TripPal </p>
+  <p>(Apple Developer Academy Cohort 6: Nano Challenge 1)</p>
+</h1>
 
-# TripPal
-Aplikasi TripPal adalah Aplikasi iOS . Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37).
+TripPal adalah Aplikasi iOS (Travel Dairy Digital) yang menyediakan berbagai informasi tempat” baru maupun legend mulai dari tempat makan, tempat belanja, tempat olahraga, atau bahkan tempat hiling. Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37).
 
 ### Preview
 <p align="center">
@@ -19,21 +22,29 @@ Berikut struktur file dan folder pada TripPal:
 
     .
     ├── TripPals.swift          # Root Project: Konfigurasi ContentView
-    ├── Info.plist              # Fonts Provided by Aplication: Poppins-(Regular, Medium, SemiBold, dan Bold)
     ├── ContentView.swift       # Tampilan Home Page
     ├── Assets                  # Aset Logo & Gambar
     ├── DetailPageView.swift    # Tampilan Detail Page
-    ├── HomeView.swift          # Berisikan Halaman Home / Beranda (Frontend Only)
-    ├── GyozaDetailView.swift   # Berisikan Halaman Gyoza Food Detail (Frontend Only)
-    ├── OrangeDetailView.swift  # Berisikan Halaman Orange Food Detail (Frontend Only)
-    ├── AvocadoDetailView.swift # Berisikan Halaman Avocado Food Detail (Frontend Only)
-    └── OrderView.swift         # Berisikan Halaman Order (Frontend Only)
+    ├── Component               # Component: Berisikan Reusable Component (Card, Search Bar, dan Text Field)
+    │   ├── CategoryCard.swift  # Berisikan Komponen Category Card (DetailPageView)
+    │   ├── Slideshow.swift     # Berisikan Komponen Slideshow (DetailPageView)
+    │   ├── searchBar.swift     # Berisikan Komponen SearchBar (ContentView)
+    │   ├── scoringCard.swift   # Berisikan Komponen ScoringCard (ContentView)
+    │   ├── locationCard.swift  # Berisikan Komponen LocationCard Static (ContentView)
+    │   ├── Card.swift          # Berisikan Komponen MainCard Dynamic (ContentView)
+    │   ├── Rating.swift        # Berisikan Komponen Rating (DetailPageView)
+    │   ├── PhotoPicker.swift   # Berisikan Komponen Photo Picker (DetailPageView)
+    │   └── TripBuddy.swift     # Berisikan Komponen TextField (DetailPageView)
+    │
+    └── Model                   # Berisikan Data Type Declaration & List Of Data
+        ├── CategoryModel.swift # Berisikan Data Type & List of Data for Category Card (DetailPageView)
+        └── MainCard.swift      # Berisikan Data Type & List of Data for Main Card (ContentView)
 
 <!-- List of Features -->
 ## Features:
 
 * Reusable Components
-* Photo Picker with PhotoUI (Upload Images)
+* Photo Picker with PhotosUI (Upload Images)
 * Grid Layout (Horizontal)
 * All Stacks (HStack, VStack, ZStack)
 * All ScrollView (Horizontal & Vertical)
@@ -49,6 +60,7 @@ Berikut struktur file dan folder pada TripPal:
 
 * [Swift](https://www.swift.org/documentation/)
 * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
+* [PhotosUI](https://developer.apple.com/documentation/swiftui/)
 * [Xcode](https://developer.apple.com/xcode/)
 * [Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37)
 
@@ -61,18 +73,26 @@ Untuk menggunakan repositori ini, ikutilah petunjuk penggunaan berikut dan pasti
 git clone https://github.com/theresatiffanytan/TripPal.git
 ```
 
-2. Jika sudah Download / Clone Project silahkan buka Project di Xcode dengan Klik Open a Project or File.
-3. Pastikan untuk memilih iPhone pada Target Simulator (Kolom Device dibagian atas Xcode). 
+2. Jika sudah Download / Clone Project, silahkan buka Project di Xcode dengan Klik Open a Project or File.
+3. Pastikan untuk memilih iPhone 14 pada Target Simulator (Kolom Device dibagian atas XCode). 
 4. Build & Run
 
+<!-- Contributors -->
+## Contributors
+
 Anggota Kelompok 22 (Nano Challenge 1) Apple Academy Indonesia Cohort 6 yang berkontribusi dalam pengerjaan proyek terdiri dari :
-* [Theresa Tiffany](https://github.com/anfrhana)
-* [Deka Primatio Deandra](https://www.github.com/dekapd99)
-* [Gery](https://github.com/B0ndan)
+* [Tiffany](https://github.com/theresatiffanytan)
+* [DK](https://www.github.com/dekapd99)
+* [Gery](https://github.com/sebastiangery)
 
 <!-- What Kind of License? -->
 ## License
 MIT License: Copyright (c) 2022 
+Tiffany DK Gery
 
+DISCLAIMER: ASSETS ARE USED FOR EDUCATION PURPOSE ONLY, NOT FOR COMMERCIAL PURPOSES
+
+Assets Source: GOOGLE IMAGE (GOOGLE REVIEWS)
+[SF SYMBOLS 4 ICON](https://developer.apple.com/sf-symbols/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
