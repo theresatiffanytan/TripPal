@@ -7,7 +7,9 @@
   <p>(Apple Developer Academy Cohort 6: Nano Challenge 1)</p>
 </h1>
 
-TripPal adalah Aplikasi iOS (Travel Dairy Digital) yang menyediakan berbagai informasi tempat” baru maupun legend mulai dari tempat makan, tempat belanja, tempat olahraga, atau bahkan tempat hiling. Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37).
+TripPal adalah Aplikasi iOS (Travel Dairy Digital) yang menyediakan berbagai informasi tempat” baru maupun legend mulai dari tempat makan, tempat belanja, tempat olahraga, atau bahkan tempat hiling. 
+
+Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37)
 
 ### Preview
 <p align="center">
@@ -81,14 +83,14 @@ git clone https://github.com/theresatiffanytan/TripPal.git
 ## Contributors
 
 Anggota Kelompok 22 (Nano Challenge 1) Apple Academy Indonesia Cohort 6 yang berkontribusi dalam pengerjaan proyek terdiri dari :
-* [Tiffany](https://github.com/theresatiffanytan)
-* [DK](https://www.github.com/dekapd99)
-* [Gery](https://github.com/sebastiangery)
+* [Theresa Tiffany](https://github.com/theresatiffanytan)
+* [Deka Primatio](https://www.github.com/dekapd99)
+* [Sebastian Gery](https://github.com/sebastiangery)
 
 <!-- What Kind of License? -->
 ## License
 MIT License: Copyright (c) 2022 
-Tiffany DK Gery
+Tiffany Deka Gery
 
 DISCLAIMER: ASSETS ARE USED FOR EDUCATION PURPOSE ONLY, NOT FOR COMMERCIAL PURPOSES
 
