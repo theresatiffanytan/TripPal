@@ -6,7 +6,7 @@
   <p>TripPal</p>
 </h1>
 
-TripPal adalah Aplikasi iOS (Travel Dairy Digital) yang menyediakan berbagai informasi tempat” baru maupun legend mulai dari tempat makan, tempat belanja, tempat olahraga, atau bahkan tempat hiling. 
+TripPal adalah Aplikasi iOS (Travel Dairy Digital) yang menyediakan berbagai informasi tempat-tempat baru mulai dari tempat rekreasi, restoran, cafe, mall, tempat olahraga sampai tempat untuk healing.
 
 Klik hyperlink ini untuk melihat [Prototype Sketch](https://sketch.com/s/bec7193a-0455-44dd-a4eb-3b3406871c37)
 
