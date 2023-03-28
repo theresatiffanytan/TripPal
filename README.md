@@ -3,8 +3,7 @@
   <br>
     <a href="#" target="_blank"><img src="TripPal.png" width="200"></a>
   <br>
-  <p>TripPal </p>
-  <p>(Apple Developer Academy Cohort 6: Nano Challenge 1)</p>
+  <p>TripPal</p>
 </h1>
 
 TripPal adalah Aplikasi iOS (Travel Dairy Digital) yang menyediakan berbagai informasi tempat” baru maupun legend mulai dari tempat makan, tempat belanja, tempat olahraga, atau bahkan tempat hiling. 
